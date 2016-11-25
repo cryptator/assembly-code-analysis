@@ -1,3 +1,6 @@
+#assembly-code-analysis
+Python scripts for analyzing intel assembly language codes(.asm) using opcode frequency and other means.
+
 #Opcode Frequency scanner for Assembly codes generated from IDA Pro and Objdump
 
 ```
