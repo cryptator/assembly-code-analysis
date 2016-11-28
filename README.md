@@ -1,4 +1,4 @@
-#assembly-code-analysis
+# assembly-code-analysis
 Python scripts for analyzing intel assembly language codes(.asm) using opcode frequency.   
 <br />
 Running the script on a folder containing .ASM files will output a CSV file with the first row containing the index of the opcode according to the **opcodeList.txt** file and the first column will contain the name of each file, followed by the frequency of each opcode that occurs in the list. (See the table below for more details)
@@ -15,13 +15,14 @@ Filename| 1 | 2 | 3 | 4 | 5 | ..... | 1808
 ... | ... | ... | ... | ... | ... | ... | ...  
 99.ASM | 13 | 3 | 5 | 42 | 0 | ..... | 0  
   
-<br />
+
 (The index of opcode is printed instead of name of the opcode because the opcodelist I was using contained some opcodes which had a comma in them. Thus, there was an error in the formatting of the output "CSV" file because of that.)
+<br />
 <br />
 **ASM_to_Frequency.py** can be used to analyze any normal .ASM/.asm file.  
 Whereas **ASM_to_Frequency_objdump.py** can be used to analyze .dsm/.ASM/.asm files generated from IDAPro, reversing executabes using objdump, etc.
 <br />
-#Opcode Frequency scanner for Assembly codes generated from IDA Pro and Objdump
+### Opcode Frequency scanner for Assembly codes generated from IDA Pro and Objdump
 
 ```
 usage:
@@ -40,10 +41,9 @@ Example: python ASM_to_Frequency.py -d /home/user/malwares/IDA -o malware_freq.c
 
 ```
 
-
 <br />
 
-#Windows executables(.exe) to Assembly Language(.asm) Script using objdump
+### Windows executables(.exe) to Assembly Language(.asm) Script using objdump
 This script will take input a folder containing Windows executables.  
 The script will save the assembly codes of all ".exe" files scanned in the specified directory to a new directory named "assembly_codes" and will move the files which it cannot disassemble to a directory named "objdump_error"
 
