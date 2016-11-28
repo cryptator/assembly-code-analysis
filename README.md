@@ -9,6 +9,7 @@ Example: If we have a folder to scan with 100 .ASM/asm files and our opcode list
 the output table format (CSV):
 
 Filename| 1 | 2 | 3 | 4 | 5 | ..... | 1808  
+ --- | --- | --- | --- | --- | --- | --- | ---  
 0.ASM | 0 | 0 | 5 | 4 | 0 | ..... | 0  
 1.ASM | 0 | 3 | 0 | 2 | 1 | ..... | 13  
 ... | ... | ... | ... | ... | ... | ... | ...  
