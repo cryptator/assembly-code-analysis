@@ -8,12 +8,12 @@ Running the script on a folder containing .ASM files will output a CSV file with
 Example: If we have a folder to scan with 100 .ASM/asm files and our opcode list contains 1808 opcodes, 
 the output table format (CSV):
 
-Filename| 1 | 2 | 3 | 4 | 5 | ..... | 1808 |
-0.ASM | 0 | 0 | 5 | 4 | 0 | ..... | 0 |
-1.ASM | 0 | 3 | 0 | 2 | 1 | ..... | 13 |
-... | ... | ... | ... | ... | ... | ... | ... |
-99.ASM | 13 | 3 | 5 | 42 | 0 | ..... | 0 |
-
+Filename| 1 | 2 | 3 | 4 | 5 | ..... | 1808  
+0.ASM | 0 | 0 | 5 | 4 | 0 | ..... | 0  
+1.ASM | 0 | 3 | 0 | 2 | 1 | ..... | 13  
+... | ... | ... | ... | ... | ... | ... | ...  
+99.ASM | 13 | 3 | 5 | 42 | 0 | ..... | 0  
+  
 #Opcode Frequency scanner for Assembly codes generated from IDA Pro and Objdump
 
 ```
