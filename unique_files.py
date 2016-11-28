@@ -44,8 +44,5 @@ with open("unique2.txt") as f1:
 			destination=folderLoc+ "/duplicate_files"
 			shutil.move(source, destination)
 
-# os.system("rm unique1.txt")
-# os.system("rm unique2.txt")
-
 os.remove("unique1.txt")
 os.remove("unique2.txt")
