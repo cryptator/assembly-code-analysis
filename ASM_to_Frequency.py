@@ -85,11 +85,11 @@ for file in files:
 	number[0]='%s' % file
 	for line in f1:
 		splitter = line.split()
-		if splitter: 											#checking for null
-			a=splitter[0]										#saving first word
-			if not(a.startswith(';') or a.endswith(':')): 		#detecting comment or a function
-				if a in opcodes:								
-					number[opcodes.index(a)]+=1					#increase freq if a is in opcodes
+		if splitter:
+			a=splitter[0]
+			if not(a.startswith(';') or a.endswith(':')):
+				if a in opcodes:
+					number[opcodes.index(a)]+=1
 
 	outfile.write( ",".join(str(x) for x in number))
 	outfile.write("\n")
