@@ -82,11 +82,11 @@ outfile.write("\n")
 	Ex:   (file.asm - line 13)  401014:	54 
 *	As we know that the opcode with start at least only after the third word,
 	we loop in that line till the end or till some conditions are met.
-	<<These all are just Tweaks to run the code faster and work more efficiently>>
-*	We check if the element is has length 2 and has valid heexadecimal syntax.
+	<<These all are just tweaks to run the code faster and work more efficiently>>
+*	We check if the element is has length 2 and has valid hexadecimal syntax.
 	Ex:  (line) 401026:	02 66 d1             	add    -0x2f(%esi),%ah
-	For "66" or "d1", as they are valid hex syntax, we just skip comparision with them
-	(Also, another necessary condition is that our opcodeList doesnt contain any
+	For "66" or "d1", as they are valid hex syntax, we just skip comparison with them
+	(Also, another necessary condition is that our opcodeList doesn't contain any
 	two - letter opcode which has a valid hexadecimal syntax)
 *	We check if the that word starts with "$","0x", "*","-" or "(":
 	indicating a register, variable, negation or anything that cannot be an opcode.
@@ -97,8 +97,8 @@ outfile.write("\n")
 				401242:	ff 25 b0 10 40 00    	jmp    *0x4010b0        >>>>>> "*" in this case
 				401628:	6d                   	insl   (%dx),%es:(%edi) >>>>>> "(" in this case
 
-*	We maintain a count till three as I have seen *maximum* of 3 opcodes occuring in a single line.
-	There are very very few instances of 4 opcodes, which we can safetly ignore.
+*	We maintain a count till three as I have seen *maximum* of 3 opcodes occurring in a single line.
+	There are very few instances of 4 opcodes, which we can safetly ignore.
 	Ex: (line)   403b75:	f3 89 f4             	repz mov %esi,%esp >>>>>> 2 opcodes
 *	If all the above conditions fail, we search for that word in the opcode list,
 	if it is present, we increment the corresponding counter by one and then continue with the next line
